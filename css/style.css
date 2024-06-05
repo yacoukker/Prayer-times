@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to bottom,#010326 ,#030640);
+    min-height: 100vh;
+    padding: 1.5rem;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(70, 70, 70);
+}
+.date{
+    position : relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+.time{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 34px;
+    font-weight: 500;
+}
+.hijri{
+    font-size: 9px;
+    color: gainsboro;
+}
+.hijri span{
+    white-space: nowrap;
+}
+.miladi{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+.quran{
+    color:white ;
+    margin-top: 2.5rem;
+    padding-block: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+.aya{
+    direction: rtl;
+    font-family: 'Amiri Quran', serif;
+    font-weight: 500;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+.translat {
+    font-size: 12px;
+    color: gainsboro;
+}
+.info__aya{
+    margin-top: 5px;
+    font-size: 10px;
+    color: gainsboro;
+}
+.data{
+    margin-top: 2rem;
+}
+
+.dropdown{
+    width: 11rem;
+    position: relative;
+    margin: 1rem auto 1rem;
+}
+.select{
+    background-color: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid rgb(168, 168, 168) ;
+}
+.caret{
+    height: 0;
+    width: 0;
+    border-left: 4px solid transparent;
+    border-bottom: 5px solid white;
+    border-right: 4px solid transparent;
+    transition: 0.3s;
+}
+.caret-retate{
+    transform: rotate(180deg);
+}
+.menu{
+    padding: 5px;
+    background-color: #010326;
+    border-radius: 2px;
+    color: white;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 7rem;
+    overflow: auto;
+    display: none;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.3s;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.open__menu{
+    display: block;
+    opacity: 1;
+}
+.menu li{
+    padding: 3px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-block: 3px;
+}
+.menu li:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.active{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.prayer{
+    color: white;
+    padding-block: 1.5rem;
+}
+.prayer__grp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75rem;
+}
+@media (max-width: 767px){
+    .prayer .prayer__grp:not(:last-child){
+        border-bottom: 1px solid rgba(220, 220, 220, 0.15);
+    } 
+}
+
+.next__prayer{
+    background-color: rgba(220, 220, 220, 0.1);
+}
+.p_name{
+    font-size: 20px;
+    font-weight: 600;
+}
+.p_time{
+    font-size: 18px;
+    color: gainsboro;
+}
+@media (min-width: 768px){
+    .date{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .time{
+        width: fit-content;
+        left: 50%;
+        top: 50%rem;
+        transform: translate(-50%,-50%);
+        font-size: 38px;
+        font-weight: 600;
+    }
+    .hijri{
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 5px;
+        width: 13rem;
+    }
+    .dropdown{
+        margin-left: 0;
+    }
+    .prayer{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+    }
+    .prayer__grp{
+        flex-direction: column;
+        background-color: white;
+        color: black;
+        padding: 0;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .next__prayer{
+        border: 5px solid blueviolet;
+
+    }
+    .p_name{
+        background-color: blueviolet;
+        color: white;
+        font-weight: 400;
+        width: 100%;
+        padding: .5rem 1rem;
+    }
+    .p_time{
+        color: black;
+        font-weight: 700;
+        font-size: 30px;
+        padding-block: 2rem;
+    }
+    
+    
+}
+@media (min-width:1024px){
+    .prayer{
+        border-top: 5px double;
+        grid-template-columns: repeat(6, 1fr);
+        margin-top: 5rem;
+        padding-top: 3rem;
+    }
+    .p_time{
+        padding-block: 4rem;
+    }
+    .time{
+        font-size: 55px;
+        font-family: 'Amiri Quran', serif;
+    }
+}

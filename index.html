@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Times</title>
+    <link rel="icon" type="image/avif" href="./imgs/imgicon.avif">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/normalase.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="date">
+        <span class="hijri" id="hijri">Friday  23 1445 H</span>
+        <span class="miladi" id="miladi">May 01 , 2000</span>
+        <span class="time" id="time">00:00</span>
+    </div>
+    <div class="quran">
+        <span class="aya">﴿ حَٰفِظُواْ عَلَى ٱلصَّلَوَٰتِ وَٱلصَّلَوٰةِ ٱلۡوُسۡطَىٰ وَقُومُواْ لِلَّهِ قَٰنِتِينَ ﴾</span>
+        <span class="translat">Guard your prayers, and the middle prayer , and stand before Allah in devotion.</span>
+        <span class="info__aya">[Surat El-Baqarah , vers 238]</span>
+    </div>
+    <div class="data">
+        <div class="dropdown">
+            <div class="select">
+                <span class="selected">
+                    <i class="ri-map-pin-fill"></i>
+                    <span>Tanger</span> 
+                </span>
+                <div class="caret"></div>
+            </div>
+            <ul class="menu" id="list__cities">
+            </ul>
+        </div>
+        <div class="prayer">
+            <div class="prayer__grp">
+                <span class="p_name">Fajr</span>
+                <span class="p_time" id="Fajr">00:00</span>
+            </div>
+            <div class="prayer__grp next__prayer">
+                <span class="p_name">Sunrise</span>
+                <span class="p_time" id="Sunrise">00:00</span>
+            </div>
+            <div class="prayer__grp">
+                <span class="p_name">Dhuhr</span>
+                <span class="p_time" id="Dhuhr">00:00</span>
+            </div>
+            <div class="prayer__grp">
+                <span class="p_name">Asr</span>
+                <span class="p_time" id="Asr">00:00</span>
+            </div>
+            <div class="prayer__grp">
+                <span class="p_name">Maghrib</span>
+                <span class="p_time" id="Maghrib">00:00</span>
+            </div>
+            <div class="prayer__grp">
+                <span class="p_name">Isha</span>
+                <span class="p_time" id="Isha">00:00</span>
+            </div>
+        </div>
+        
+    </div>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
